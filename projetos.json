@@ -1,0 +1,38 @@
+{
+  "categorias": {
+    "desenvolvimento": [
+      {
+        "id": "01",
+        "titulo": "Sistema ERP - AMT Solutions ( MySQL, PHP, JavaScript, HTML, CSS )",
+        "slug": "projeto-dev-exemplo",
+        "tecnologias": ["React", "Node.js", "MySQL"],
+        "detalhes": {
+          "escopo": "Aqui vai o texto longo, estilo README, explicando o problema e a solução.",
+          "links": [
+            { "label": "Repositório GitHub", "url": "https://github.com/seuusuario/projeto" },
+            { "label": "Deploy Online", "url": "https://meuprojeto.com" }
+          ],
+          "midia": [
+            { "tipo": "video", "url": "https://youtube.com/watch?v=link-do-video" },
+            { "tipo": "imagem", "url": "/assets/print-projeto.png" }
+          ]
+        }
+      }
+    ],
+    "qualidade": [
+      {
+        "id": "02",
+        "titulo": "Auditoria de Qualidade de software ( MPS.BR )",
+        "slug": "projeto-qualidade-mps",
+        "tecnologias": ["PGQ", "GAP Analisys", "MPS.BR", "Modelagem de fluxo de processos"],
+        "detalhes": {
+          "escopo": "Descrição detalhada do processo de auditoria e automação aplicada.",
+          "links": [
+            { "label": "Documentação", "url": "https://link.com/doc" }
+          ],
+          "midia": []
+        }
+      }
+    ]
+  }
+}
