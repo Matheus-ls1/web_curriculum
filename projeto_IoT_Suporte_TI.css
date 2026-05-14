@@ -1,0 +1,281 @@
+:root {
+    --primary: #64ffda;
+    --bg: #0a192f;
+    --bg-light: #112240;
+    --text: #ccd6f6;
+    --text-dim: #8892b0;
+    --white: #e6f1ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=1600') center/cover;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.badge {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-top: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tags span {
+    display: inline-block;
+    background: var(--bg-light);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+h2 {
+    color: var(--white);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+h2 i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--bg);
+}
+
+th {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary);
+}
+
+/* Challenges */
+.challenge-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 2px solid var(--primary);
+}
+
+.challenge-item h4 {
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer.academic {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.repo-link {
+    margin: 25px 0;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    background: var(--bg-light);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+/* Esconde a barra de rolagem mas mantém a funcionalidade */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+/* Estilo de cada Slide */
+.slide {
+    flex: 0 0 100%; /* Cada slide ocupa 100% da largura */
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    /* display: block;
+    object-fit: cover; */
+    aspect-ratio: 16 / 9; /* Mantém proporção padrão de monitor */
+}
+
+/* Legendas no Carrossel */
+.slide .caption {
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.step {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+/* Navegação (Pontos/Dots) */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+    background: var(--primary);
+}
+

@@ -54,7 +54,7 @@ async function carregarProjetos() {
                 // Passamos o slug via URL
                 cardDiv.style.cursor = 'pointer'; // Muda o cursor do mouse para indicar que é clicável
                 cardDiv.addEventListener('click', () => {
-                    window.location.href = `escopo.html?projeto=${projeto.slug}`;
+                    window.location.href = `./${projeto.slug}.html`;
                 });
 
                 // Adiciona o card pronto dentro do grid da categoria

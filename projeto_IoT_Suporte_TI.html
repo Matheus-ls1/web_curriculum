@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Monitor TI</title>
+    <link rel="stylesheet" href="projeto_IoT_Suporte_TI.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <span class="badge">Projeto CTIC 2026/S1</span>
+                <h1>Monitor TI</h1>
+                <p class="subtitle">Ecossistema Integrado de Gestão e Monitoramento IoT</p>
+
+                <div class="repo-link">
+                    <a href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Ver Código no GitHub
+                    </a>
+                </div>
+
+                <div class="tags">
+                    <span><i class="fab fa-python"></i> Python</span>
+                    <span><i class="fab fa-react"></i> React</span>
+                    <span><i class="fas fa-microchip"></i> IoT</span>
+                    <span><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="overview">
+            <h2><i class="fas fa-info-circle"></i> Visão Geral</h2>
+            <p>Este projeto foi desenvolvido como uma solução de infraestrutura e software para <strong>Ambientes de
+                    aprendizado</strong>. O objetivo central é otimizar o suporte técnico escolar através de um
+                ecossistema que integra monitoramento de hardware em tempo real, gestão de chamados e armazenamento
+                seguro de dados confidenciais.</p>
+            <p>O diferencial técnico reside na <strong>separação lógica de rede</strong> implementada via software,
+                permitindo segurança corporativa em um ambiente de hardware compartilhado.</p>
+        </section>
+
+        <section id="demo">
+            <h2><i class="fas fa-desktop"></i> Sistema em Operação</h2>
+
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="slide" id="slide1">
+                        <img src="./pics/images/web_painel_TI.png" alt="Tela inicial">
+                        <div class="caption">
+                            <span class="step">01</span> Tela inicial com resumo de chamados e tamperatura do rack em tempo real.
+                        </div>
+                    </div>
+
+                    <div class="slide" id="slide2">
+                        <img src="caminho/para/foto-chamados.jpg" alt="Gestão de Chamados">
+                        <div class="caption">
+                            <span class="step">02</span> Fila de Chamados: Gestão centralizada de incidentes reportados
+                            pelos docentes.
+                        </div>
+                    </div>
+
+                    <div class="slide" id="slide3">
+                        <img src="caminho/para/foto-esp32.jpg" alt="Hardware ESP32">
+                        <div class="caption">
+                            <span class="step">03</span> Infraestrutura IoT: Módulos ESP32 configurados com IP estático
+                            no rack.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <a href="#slide1" class="nav-dot"></a>
+                    <a href="#slide2" class="nav-dot"></a>
+                    <a href="#slide3" class="nav-dot"></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="features">
+            <h2><i class="fas fa-star"></i> Funcionalidades Principais</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-thermometer-half icon"></i>
+                    <h3>Monitoramento IoT</h3>
+                    <p>Leitura em tempo real da temperatura do rack de servidores via sensores térmicos digitais.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-ticket-alt icon"></i>
+                    <h3>Central de Chamados</h3>
+                    <p>Portal Web responsivo para docentes e um acionador físico (Botão de Pânico) via ESP32 para
+                        emergências.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-shield icon"></i>
+                    <h3>Painel Administrativo</h3>
+                    <p>Dashboard centralizado para gestão de incidentes, telemetria IoT e controle de inventário da TI.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-server icon"></i>
+                    <h3>NAS Seguro</h3>
+                    <p>Servidor de arquivos restrito (Samba) para documentação técnica, blindado contra acesso de
+                        usuários comuns.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2><i class="fas fa-network-wired"></i> Arquitetura e Infraestrutura</h2>
+            <p>O sistema utiliza uma topologia mista para garantir alta disponibilidade e segurança:</p>
+            <ul>
+                <li><strong>Servidor Central:</strong> Virtualizado em Linux Ubuntu, gerenciando API, Banco de Dados e
+                    Arquivos.</li>
+                <li><strong>Segurança Lógica (Firewall):</strong> Implementação de regras via <strong>UFW</strong> para
+                    segregação de tráfego baseada em Host.</li>
+                <li><strong>Gestão de IPs:</strong> Endereçamento estático para infraestrutura crítica e pool DHCP
+                    exclusivo para usuários (.100 a .200).</li>
+            </ul>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dispositivo</th>
+                            <th>Função</th>
+                            <th>IP Fixo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Servidor Ubuntu</td>
+                            <td>Web/API/NAS</td>
+                            <td>192.168.1.50</td>
+                        </tr>
+                        <tr>
+                            <td>PC Técnico</td>
+                            <td>Administração</td>
+                            <td>192.168.1.10</td>
+                        </tr>
+                        <tr>
+                            <td>ESP32 Rack</td>
+                            <td>Sensor Térmico</td>
+                            <td>192.168.1.20</td>
+                        </tr>
+                        <tr>
+                            <td>ESP32 Botão</td>
+                            <td>Acionador Físico</td>
+                            <td>192.168.1.21</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="challenges">
+            <h2><i class="fas fa-tools"></i> Desafios Técnicos Superados</h2>
+            <div class="challenge-item">
+                <h4>Segregação de Redes sem VLANs</h4>
+                <p>O desafio de isolar dados sensíveis em roteadores domésticos foi resolvido através de um
+                    <strong>Host-Based Firewall</strong>, configurando o servidor para filtrar acessos por endereços IP
+                    específicos.</p>
+            </div>
+            <div class="challenge-item">
+                <h4>Deploy de SPA em Servidores Estáticos</h4>
+                <p>Superação do erro de rotas 404 do React através de um servidor web customizado em Python que gerencia
+                    o histórico de navegação.</p>
+            </div>
+        </section>
+
+        <footer class="academic">
+            <p><i class="fas fa-graduation-cap"></i> Bacharelado em Engenharia de Software | PUCPR 2026</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
